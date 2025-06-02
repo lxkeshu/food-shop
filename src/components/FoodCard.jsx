@@ -7,29 +7,31 @@ const FoodCard = ({ id, name, price, desc, img, rating, handleToast }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="font-bold w-[250px] bg-white p-5 flex flex-col rounded-lg gap-2">
-      <img
-        src={img}
-        alt=""
-        className="w-auto h-[130px]  hover:scale-110 cursor-grab transition-all duration-500 ease-in-out "
-      />
-      <div className="text-sm flex justify-between">
-        <h2>{name}</h2>
-        <span className="text-green-500 ">₹{price}</span>
+    <div className="font-bold bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col gap-2 h-full">
+      <div className="relative overflow-hidden rounded-lg">
+        <img
+          src={img}
+          alt={name}
+          className="w-full h-[180px] object-cover hover:scale-110 cursor-grab transition-all duration-500 ease-in-out"
+        />
       </div>
-      <p className="text-sm font-normal">{desc.slice(0, 50)}...</p>
-      <div className="flex justify-between ">
-        <span className="flex justify-center items-center">
+      <div className="flex justify-between items-center">
+        <h2 className="text-base lg:text-lg">{name}</h2>
+        <span className="text-green-500 font-semibold">₹{price}</span>
+      </div>
+      <p className="text-sm font-normal text-gray-600 line-clamp-2">{desc}</p>
+      <div className="flex justify-between items-center mt-auto pt-2">
+        <span className="flex items-center text-sm">
           <AiFillStar className="mr-1 text-yellow-400" /> {rating}
         </span>
         <button
           onClick={() => {
             dispatch(
-              addToCart({ id, name, price, rating, price, img, qty: 1 })
+              addToCart({ id, name, price, rating, img, qty: 1 })
             );
             handleToast(name);
           }}
-          className="p-1 text-white bg-green-500 hover:bg-green-600 rounded-lg text-sm"
+          className="px-3 py-1.5 text-white bg-green-500 hover:bg-green-600 rounded-lg text-sm transition-colors duration-200"
         >
           Add to cart
         </button>
