@@ -2,8 +2,6 @@
 
 A sleek and responsive food delivery application built with React and Vite. Experience a modern UI with seamless food ordering, cart management, and real-time updates.
 
-![Food Shop](src/assets/logo.png)
-
 ## ✨ Features
 
 - 🎨 Modern and responsive UI design
