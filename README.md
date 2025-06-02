@@ -2,19 +2,6 @@
 
 A sleek and responsive food delivery application built with React and Vite. Experience a modern UI with seamless food ordering, cart management, and real-time updates.
 
-## ✨ Features
-
-- 🎨 Modern and responsive UI design
-- 🔍 Advanced food search functionality
-- 🛒 Interactive shopping cart
-- 🔐 Protected routes for secure checkout
-- 📱 Mobile-first design approach
-- ⚡ Real-time updates and notifications
-- 🎯 Category-based food filtering
-- 🔄 Redux state management
-- 🎭 Toast notifications for user feedback
-- ⏳ Loading spinners for better UX
-
 ## 🛠️ Tech Stack
 
 - **Frontend Framework:** React 18
